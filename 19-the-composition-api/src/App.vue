@@ -1,27 +1,17 @@
 <template>
-  <section class="container">
-    <h2>{{ userName }}</h2>
-  </section>
+  <the-counter></the-counter>
+  <control-center></control-center>
 </template>
 
 <script>
-import { ref } from 'vue';
+import ControlCenter from './components/ControlCenter.vue';
+import TheCounter from './components/TheCounter.vue';
 
 export default {
-  setup() {
-    const uName = ref('Maximilian');
-
-    setTimeout(function() {
-      uName.value = 'Max';
-    }, 2000);
-
-    return { userName: uName };
-  }
-  // data() {
-  //   return {
-  //     userName: 'Maximilian',
-  //   };
-  // },
+  components: {
+    ControlCenter,
+    TheCounter,
+  },
 };
 </script>
 
@@ -36,6 +26,7 @@ html {
 
 body {
   margin: 0;
+  text-align: center;
 }
 
 .container {
