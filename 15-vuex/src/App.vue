@@ -1,13 +1,14 @@
 <template>
-  <base-container title="Vuex"></base-container>
+  <the-header></the-header>
+  <router-view></router-view>
 </template>
 
 <script>
-import BaseContainer from './components/BaseContainer.vue';
+import TheHeader from './components/nav/TheHeader.vue';
 
 export default {
   components: {
-    BaseContainer,
+    TheHeader
   },
 };
 </script>
