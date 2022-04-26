@@ -36,7 +36,7 @@ export default {
       console.log('Old name: ' + oldValues[1]);
       console.log('New name: ' + newValues[1]);
     });
-
+    
     function setNewAge() {
       uAge.value = 33;
     }
@@ -84,6 +84,7 @@ html {
 
 body {
   margin: 0;
+  text-align: center;
 }
 
 .container {
