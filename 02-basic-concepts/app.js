@@ -1,22 +1,22 @@
 const app = Vue.createApp({
    data() {
       return {
-         boxASelected: false,
-         boxBSelected: false,
-         boxCSelected: false,
+         counter: 0,
+         name: ''
       };
    },
    methods: {
-      boxSelected(box) {
-         if (box === 'A') {
-            this.boxASelected = true;
-         } else if (box === 'B') {
-            this.boxBSelected = true;
-         } else if (box === 'C') {
-            this.boxCSelected = true;
-         }
+      setName(event, lastName) {
+         this.name = event.target.value + ' ' + lastName;
       },
-   },
+      add(num) {
+         this.counter = this.counter + num;
+      },
+      reduce(num) {
+         this.counter = this.counter - num;
+         // this.counter--;
+      }
+   }
 });
 
-app.mount('#styling');
+app.mount('#events');
